@@ -13,3 +13,11 @@ variable "password" {
   description = "Dummy API password"
   sensitive   = true
 }
+
+variable "teams" {
+  type = map(object({
+    privacy     = string
+    description = optional(string)
+  }))
+  description = "Teams to manage, keyed by team name."
+}

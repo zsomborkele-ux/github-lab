@@ -7,12 +7,7 @@ locals {
   ])
 }
 
-resource "github_team" "security_team" {
-  name        = "Security Team"
-  description = "Organization Security Management Team"
-}
-
 resource "github_organization_role_team" "security_managers" {
   role_id   = local.security_manager_id
-  team_slug = github_team.security_team.slug
+  team_slug = github_team.teams["Security Team"].slug
 }
