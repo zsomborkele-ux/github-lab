@@ -50,3 +50,11 @@ resource "github_repository_file" "codeowners" {
   commit_message      = "Add CODEOWNERS file"
   overwrite_on_create = true
 }
+
+resource "github_repository" "tf_github_lab_devops_repository" {
+  name                 = "tf-lab-devops"
+  description          = "gh-lab-zkele DevOps repository"
+  visibility           = "private"
+  vulnerability_alerts = true
+  auto_init            = true
+}
