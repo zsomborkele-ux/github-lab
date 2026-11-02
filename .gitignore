@@ -3,5 +3,6 @@
 *.tfstate.*
 *.tfvars
 *.tfvars.json
+*.env
 crash.log
 crash.*.log
