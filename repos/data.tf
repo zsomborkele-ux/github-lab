@@ -1,8 +1,6 @@
-data "terraform_remote_state" "base" {
-  backend = "pg"
-
-  config = {
-    conn_str    = var.base_pg_conn_str
-    schema_name = "terraform_state_base"
-  }
+data "github_organization" "org" {
+  name         = "gh-lab-zkele"
+  summary_only = true
 }
+
+data "github_organization_teams" "all" {}
