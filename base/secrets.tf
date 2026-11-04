@@ -12,10 +12,10 @@ resource "github_actions_organization_secret" "password" {
 
 resource "github_actions_organization_secret_repositories" "username" {
   secret_name             = github_actions_organization_secret.username.secret_name
-  selected_repository_ids = []
+  selected_repository_ids = [data.github_repository.app.repo_id]
 }
 
 resource "github_actions_organization_secret_repositories" "password" {
   secret_name             = github_actions_organization_secret.password.secret_name
-  selected_repository_ids = []
+  selected_repository_ids = [data.github_repository.app.repo_id]
 }
