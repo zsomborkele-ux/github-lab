@@ -21,3 +21,15 @@ variable "teams" {
   }))
   description = "Teams to manage, keyed by team name."
 }
+
+variable "devops_team_membership" {
+  type = list(string)
+}
+
+variable "nodejs_team_membership" {
+  type = list(string)
+}
+
+variable "security_team_membership" {
+  type = list(string)
+}

@@ -3,6 +3,7 @@
 *.tfstate.*
 *.tfvars
 *.tfvars.json
+!base/github-team-membership.auto.tfvars
 *.env
 crash.log
 crash.*.log
