@@ -1,5 +1,11 @@
-resource "github_repository" "tf_github_lab_spa_repository" {
-  name         = "tf-lab-spa"
-  has_issues   = true
-  has_projects = true
+module "spa" {
+  source = "./modules/repository"
+
+  name                   = "tf-lab-spa"
+  private                = true
+  has_issues             = true
+  has_projects           = true
+  default_branch         = "main"
+  auto_init              = false
+  delete_branch_on_merge = false
 }
